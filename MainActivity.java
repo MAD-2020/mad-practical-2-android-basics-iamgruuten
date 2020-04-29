@@ -63,7 +63,20 @@ public class MainActivity extends AppCompatActivity {
             }
         });
     }
-
+    
+    @Override
+    protected void onStart() {
+        super.onStart();
+        Log.v(TAG,"Started");
+    }
+    
+    @Override
+    protected void onPause() {
+        super.onStart();
+        Log.v(TAG,"Paused");
+        Score = 0;
+    }
+    
     private void reset(){
         //Initialize
         intRandom = random(); //Get Random
